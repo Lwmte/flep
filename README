@@ -1,0 +1,80 @@
+FLEP (FLExible Patcher) aka TREP2
+v 1.1.41 - 30 Jan 2013
+
+
+CONTENTS
+
+1.  What is this?
+2.  Features
+3.  What's new?
+4.  Which versions of TOMB4.EXE are supported?
+5.  Credits and thanks
+
+
+
+1. What is this?
+
+Once upon a time, some people wrote wonderful software called TREP. Then, some other guy wrote even more wonderful
+software called NGLE. Time passed, and both of these are now somewhat stopped developing. Despite the fact that NGLE
+now includes almost every TREP feature that was ever created, there are some that are not included. For those,
+we now introduce new, second generation of TREP - FLEP.
+
+Theoretically, FLEP is fully compatible with current NG Tomb4, it does not interfere with NG DLL when properly used.
+
+Basically, FLEP is revamped and empowered DRACO custom patch module from classic TREP version. It now allows you
+to make UNLIMITED amount of patches, parameters, create interconnected patch entries with different binary targets,
+independent conditional behaviour options and additional data types. Source code got major refactoring and
+re-writes, so most of old limits and slow-downs were eliminated.
+
+Moreover, FLEP now allows you to edit not only Tomb4.exe file and / or TRLE-related binaries, it is now completely
+independent patching engine, which can be used to edit ANY binary file.
+
+
+2. Features
+
+01) Almost completely rewritten and refactored source code. As result, application works much faster.
+02) New interpreter of static patches. It now supports not only raw hex strings, but also some different commands
+    which alter patching behaviour - SetFileLength and Fill.
+03) Allows to simultaneously patch numerous binaries.
+04) Supports additional parameter types - strings, float, 8/16 bits and A,B,C byte sequences (useful for RGB values).
+05) Supports unlimited amount of patches, also unlimited amount of offsets and parameters for each.
+06) Each parameter can now have several offsets, this way you can simultaneously change similar values in binary
+    with just only one parameter slot.
+07) Each parameter now has its own conditional behaviour switch.
+
+
+3. What's new?
+
+
+1.1.41  - RGB data type modified to support scattered offsets for each colour byte (divide them with "|" symbol).
+
+1.1.38  - Minor code refactoring, fixed wrong patch set / preset handling.
+
+1.1.31  - Quick overflow fix for last bit of bits(16) datatype.
+
+1.1.30  - Hex types replaced with new bit types, modified parameter view a bit to support multi-column mode, 
+          added copy function, minor interface fixes and speed-ups.
+
+1.0.86  - Fixed param list killing with escape button, re-done patching method with kernel32 routines (faster),
+          fixed various bugs with moving patch up/down, added minimize button, added color picker for RGB param.
+
+1.00b   - Beta version. Fixed various UI bugs, changed preset format a bit.
+
+1.00a   - Initial alpha version. 
+
+
+4. Which versions of TOMB4.EXE are supported?
+
+Currently, FLEP doesn't support any specific executable version, it is only a shell for patching ANY binary.
+Custom patch databases for old tomb4.exe or TRNG version should be downloaded seperately.
+
+Good old "classic tomb4.exe" can be still patched with legacy (TREP 0.76x) versions, it is still available for
+download and will be supported for some time.
+
+
+5. CREDITS AND THANKS
+
+Delta, for influence and inspiration!
+Ceamonks890, for making this thread: http://www.tombraiderforums.com/showthread.php?t=179050
+Ensi aka Pyuaumch for writing original TREP.
+Paolone for NGLE/TRNG.

@@ -1,0 +1,9 @@
+patchsetversion=1.0
+  header=0
+      enabled=1
+      name=Empty custom patch
+      description=
+      category=
+      dependencies=
+      filename=tomb4.exe
+  footer=0
